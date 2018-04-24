@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  font-family: 'IBM Plex Sans', sans-serif; }
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0; }
+
+#sidebar {
+  display: flex;
+  align-items: flex-end;
+  flex-basis: 37%; }
+  #sidebar #introduction {
+    top: 85px;
+    height: 300px;
+    width: 100%;
+    position: fixed; }
+    #sidebar #introduction .portrait {
+      width: 200px;
+      height: 200px; }
+      #sidebar #introduction .portrait img {
+        width: auto;
+        height: 100%; }
+  #sidebar nav {
+    display: flex;
+    align-items: flex-end; }
+    #sidebar nav ul {
+      position: fixed;
+      list-style: none;
+      top: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end; }
+      #sidebar nav ul li .navbar-item {
+        text-decoration: none; }
+
+main {
+  flex-basis: 63%;
+  display: block;
+  padding-left: 70px;
+  padding-right: 30px;
+  background-color: rgba(250, 250, 250, 0.95); }
+  main #about {
+    margin: 100px 0 0 0; }
+
+#background-image {
+  background-image: url("/images/london.jpeg");
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: 140%;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vw;
+  z-index: -2;
+  opacity: .75; }
+
+/*# sourceMappingURL=style.css.map */
