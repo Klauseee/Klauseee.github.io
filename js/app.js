@@ -13,6 +13,6 @@ function scrollLoop() {
   const background = document.querySelector('#background-image');
   const yScrollPosition = window.scrollY;
 
-  setTranslate(0, yScrollPosition * -0.1, background);
+  setTranslate(0, yScrollPosition * -0.035, background);
   requestAnimationFrame(scrollLoop);
 }
