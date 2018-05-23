@@ -9,20 +9,20 @@ body {
   padding: 0; }
 
 #sidebar {
+  right: 50px;
   display: flex;
-  justify-content: flex-end;
-  flex-basis: 37%;
-  width: 37%;
-  flex-direction: column; }
+  width: 25%;
+  flex-direction: column;
+  background-color: white; }
   #sidebar #introduction {
     width: inherit;
     position: fixed;
     top: 85px;
     height: 300px;
-    width: 100%;
+    width: inherit;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; }
+    align-items: flex-end; }
     #sidebar #introduction .portrait {
       width: 200px;
       height: 200px; }
@@ -30,18 +30,23 @@ body {
         width: auto;
         height: 100%; }
   #sidebar nav {
-    display: flex;
-    position: fixed; }
+    width: inherit;
+    position: fixed;
+    top: 350px; }
     #sidebar nav ul {
       list-style: none;
       display: flex;
       flex-direction: column;
       align-items: flex-end; }
-      #sidebar nav ul li .navbar-item {
-        text-decoration: none; }
+      #sidebar nav ul li {
+        margin: 10px 0; }
+        #sidebar nav ul li .navbar-item {
+          color: black;
+          text-decoration: none;
+          font-size: 24px; }
 
 main {
-  flex-basis: 63%;
+  flex-basis: 75%;
   display: block;
   padding-left: 70px;
   padding-right: 30px;

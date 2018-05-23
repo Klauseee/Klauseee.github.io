@@ -5,7 +5,7 @@ function setTranslate(xPos, yPos, el) {
   el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0)`;
 }
 
-window.addEventListener('DOMContentLoaded', scrollLoop, false);
+window.addEventListener('DOMContentLoaded', scrollLoop);
 
 
 function scrollLoop() {
