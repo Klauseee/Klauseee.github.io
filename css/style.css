@@ -12,8 +12,7 @@ body {
   right: 50px;
   display: flex;
   width: 25%;
-  flex-direction: column;
-  background-color: white; }
+  flex-direction: column; }
   #sidebar #introduction {
     padding-right: 20px;
     width: inherit;
