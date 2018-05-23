@@ -10,13 +10,19 @@ body {
 
 #sidebar {
   display: flex;
-  align-items: flex-end;
-  flex-basis: 37%; }
+  justify-content: flex-end;
+  flex-basis: 37%;
+  width: 37%;
+  flex-direction: column; }
   #sidebar #introduction {
+    width: inherit;
+    position: fixed;
     top: 85px;
     height: 300px;
     width: 100%;
-    position: fixed; }
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }
     #sidebar #introduction .portrait {
       width: 200px;
       height: 200px; }
@@ -25,11 +31,9 @@ body {
         height: 100%; }
   #sidebar nav {
     display: flex;
-    align-items: flex-end; }
+    position: fixed; }
     #sidebar nav ul {
-      position: fixed;
       list-style: none;
-      top: 400px;
       display: flex;
       flex-direction: column;
       align-items: flex-end; }
