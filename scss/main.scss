@@ -17,6 +17,7 @@ body {
   flex-direction: column;
   background-color: white;
   #introduction {
+    padding-right: 20px;
     width: inherit;
     position: fixed;
     top: 85px;
@@ -33,15 +34,18 @@ body {
         height: 100%;
       }
     }
+    h1 {
+      text-align: right;
+    }
   }
 
   nav {
-    // display: flex;
-    // align-items: flex-end;
+    padding-right: 20px;
     width: inherit;
     position: fixed;
     top: 350px;
     ul {
+      margin-top: 85px;
       list-style: none;
       display: flex;
       flex-direction: column;
@@ -66,10 +70,25 @@ main {
   padding-right: 30px;
   background-color: rgba(250, 250, 250, 0.95);
   #about {
-    margin: 100px 0 0 0;
+    margin: 100px 0 50px 0;
+    border-bottom: 2px solid grey;
   }
   #skills {
-    
+    margin-top: 200px;
+    ul {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      li {
+        flex-basis: 25%;
+        margin-top: 18px;
+        i {
+          font-size: 3.5rem;
+        }
+      }
+    }
   }
 }
 
