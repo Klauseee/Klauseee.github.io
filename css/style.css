@@ -8,6 +8,9 @@ body {
   margin: 0;
   padding: 0; }
 
+h2 {
+  font-size: 38px; }
+
 #sidebar {
   right: 50px;
   display: flex;
@@ -24,14 +27,15 @@ body {
     flex-direction: column;
     align-items: flex-end; }
     #sidebar #introduction .portrait {
-      width: 200px;
-      height: 200px; }
+      display: flex;
+      justify-content: flex-end;
+      width: 300px;
+      height: 300px; }
       #sidebar #introduction .portrait img {
         width: auto;
         height: 100%; }
     #sidebar #introduction h2 {
-      text-align: right;
-      font-size: 38px; }
+      text-align: right; }
   #sidebar nav {
     padding-right: 20px;
     width: inherit;

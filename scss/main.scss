@@ -10,6 +10,15 @@ body {
   padding: 0;
 }
 
+h1 {
+
+}
+
+h2 {
+  font-size: 38px;
+}
+
+
 #sidebar {
   right: 50px;
   display: flex;
@@ -27,8 +36,10 @@ body {
     flex-direction: column;
     align-items: flex-end;
     .portrait {
-      width: 200px;
-      height: 200px;
+      display: flex;
+      justify-content: flex-end;
+      width: 300px;
+      height: 300px;
       img {
         width: auto;
         height: 100%;
@@ -36,7 +47,6 @@ body {
     }
     h2 {
       text-align: right;
-      font-size: 38px;
     }
   }
 
@@ -84,6 +94,9 @@ body {
 }
 
 main {
+  h1 {
+
+  }
   section {
     margin-top: 100px;
     padding-bottom: 100px;
