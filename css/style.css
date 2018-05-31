@@ -33,10 +33,10 @@ h3 {
     align-items: flex-end; }
     #sidebar #introduction .portrait {
       width: 150px;
-      height: 150px; }
+      height: 225px; }
       #sidebar #introduction .portrait img {
         width: 100%; }
-    #sidebar #introduction h2 {
+    #sidebar #introduction .typeit {
       text-align: right; }
   #sidebar nav {
     padding-right: 20px;
@@ -44,13 +44,13 @@ h3 {
     position: fixed;
     top: 325px; }
     #sidebar nav ul {
-      margin-top: 85px;
+      margin-top: 15px;
       list-style: none;
       display: flex;
       flex-direction: column;
       align-items: flex-end; }
       #sidebar nav ul li {
-        margin: 10px 0; }
+        margin: 20px 0; }
         #sidebar nav ul li .navbar-item {
           color: black;
           text-decoration: none;
@@ -92,7 +92,13 @@ main {
       flex-wrap: wrap; }
       main #skills ul li {
         flex-basis: 25%;
-        margin-top: 18px; }
+        margin-top: 18px;
+        display: flex;
+        justify-content: center; }
+        main #skills ul li:first-child, main #skills ul li:nth-child(5n) {
+          justify-content: flex-start; }
+        main #skills ul li:nth-child(4n), main #skills ul li:nth-child(8n), main #skills ul li:last-child {
+          justify-content: flex-end; }
         main #skills ul li i {
           font-size: 3.5rem; }
 
