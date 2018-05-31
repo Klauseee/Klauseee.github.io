@@ -133,6 +133,15 @@ main {
       }
     }
   }
+  #portfolio {
+    .card {
+      // border: 1px solid grey;
+      img {
+        height: 40vh;
+        width: auto;
+      }
+    }
+  }
 }
 
 #background-image {
