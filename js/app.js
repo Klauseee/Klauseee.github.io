@@ -2,14 +2,35 @@
 
 console.log('js loaded');
 
+// const placeholders = {
+//   about: ,
+//   skills: ,
+//   portfolio: ,
+//   experience: ,
+//   education:
+// }
 
-function setTranslate(xPos, yPos, el) {
-  el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0)`;
-}
-
-window.addEventListener('DOMContentLoaded', init);
+// Dom content loaded
+$(() => {
+  init();
+});
 
 function init() {
+  const $links = $('.navbar-item');
+  console.log($links);
+
+  function setTranslate(xPos, yPos, el) {
+    el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0)`;
+  }
+
+  function scrollLoop() {
+    const background = document.querySelector('#background-image');
+    const yScrollPosition = window.scrollY;
+
+    setTranslate(0, yScrollPosition * -0.035, background);
+    requestAnimationFrame(scrollLoop);
+  }
+
   scrollLoop();
 
   new TypeIt('.typeit', {
@@ -29,13 +50,13 @@ function init() {
     .type('Weighlifting coach')
     .pause(1000)
     .delete();
-}
 
-function scrollLoop() {
+  $links.on('click', ($el) => {
+    const $target = $el.target.text.toLowerCase();
+    const value = $(`#${$target}`).offset().top;
+    $('html, body').animate({
+      scrollTop: `${value}px`
+    });
+  });
 
-  const background = document.querySelector('#background-image');
-  const yScrollPosition = window.scrollY;
-
-  setTranslate(0, yScrollPosition * -0.035, background);
-  requestAnimationFrame(scrollLoop);
 }
