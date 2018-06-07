@@ -32,30 +32,26 @@ function init() {
   scrollLoop();
 
   new TypeIt('.typeit', {
-    strings: ['Hi there, I\'m Nic!', 'Web developer', 'SciFi fan', 'Weighlifting coach'],
+    strings: ['I\'m Nic Wilson!', 'Web developer', 'Weighlifting coach', 'SciFi fan' ],
     loop: true,
     speed: 100,
-    breakLines: false,
     deleteSpeed: 30
   });
-
 
   $links.on('click', ($el) => {
     const $target = $el.target.text.toLowerCase();
     const value = $(`#${$target}`).offset().top;
-    console.log(value);
     $('html, body').animate({
       scrollTop: `${value}px`
     }, 1500);
   });
 
   $(window).scroll(() =>{
-    console.log($('html, body').scrollTop());
     for(var section in placeholders) {
       if($('html, body').scrollTop() >= placeholders[section][0] && $('html, body').scrollTop() < placeholders[section][1]) {
-        $(`.${section}`).css('text-decoration', 'underline');
+        $(`.${section}`).addClass('active');
       } else {
-        $(`.${section}`).css('text-decoration', 'none');
+        $(`.${section}`).removeClass('active');
       }
     }
   });
