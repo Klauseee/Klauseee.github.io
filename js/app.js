@@ -3,10 +3,11 @@
 console.log('js loaded');
 
 const placeholders = {
-  about: [0, 515],
-  skills: [515, 1470],
-  portfolio: [1470, 3895],
-  experience: [3895, 4650]
+  about: [],
+  skills: [],
+  portfolio: [],
+  experience: [],
+  education: []
 };
 
 // Dom content loaded
@@ -15,7 +16,31 @@ $(() => {
 });
 
 function init() {
+  const $sections = $('main > section');
   const $links = $('.navbar-item');
+  $('.about').addClass('active');
+
+  $.each($sections, (i, section) => {
+    if(i < $sections.length - 1) {
+      placeholders[section.id].push(($(section).offset().top - 150), ($($sections[i + 1]).offset().top - 150));
+    }
+  });
+
+  $(window).scroll(() =>{
+    for(var section in placeholders) {
+      if($('html, body').scrollTop() >= placeholders[section][0] && $('html, body').scrollTop() < placeholders[section][1]) {
+        $(`.${section}`).addClass('active');
+      } else {
+        $(`.${section}`).removeClass('active');
+      }
+      if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+        $('.education').addClass('active');
+        $('.experience').removeClass('active');
+      } else {
+        $('.education').removeClass('active');
+      }
+    }
+  });
 
   function setTranslate(xPos, yPos, el) {
     el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0)`;
@@ -46,14 +71,5 @@ function init() {
     }, 1500);
   });
 
-  $(window).scroll(() =>{
-    for(var section in placeholders) {
-      if($('html, body').scrollTop() >= placeholders[section][0] && $('html, body').scrollTop() < placeholders[section][1]) {
-        $(`.${section}`).addClass('active');
-      } else {
-        $(`.${section}`).removeClass('active');
-      }
-    }
-  });
 
 }
