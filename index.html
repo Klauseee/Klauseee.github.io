@@ -8,10 +8,11 @@
   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/5.9.0/typeit.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="/js/app.js"></script>
 </head>
 <body>
@@ -79,8 +80,13 @@
       <h2>Portfolio</h2>
       <div class="card jbly">
         <h3>Jbly - a full stack MERN app</h3>
-        <img class="jbly-image" src="./images/jbly-mobile.png" alt="picture of jbly app in mobile">
-        <p>Using React, as part of a pair, we produced a job board that functions in a similar way to Tinder. A lot of the project was done in a code pairing format, where we interchanged roles several times a day so that we both had a full grasp of the whole project. Adding gestures to the mobile version of the app using react-hammerjs was something that I concentrated on specifically.
+        <div class="main-carousel">
+          <div class="carousel-cell"><img class="jbly-image" src="./images/jbly-mobile.png" alt="picture of jbly app in mobile"/></div>
+          <div class="carousel-cell"><img class="jbly-image" src="./images/jbly-jobs.png" alt="picture of jbly jobs index"/></div>
+          <div class="carousel-cell"><img class="jbly-image" src="./images/jbly-profile.png" alt="picture of jbly user profile"/></div>
+          <div class="carousel-cell"><img class="jbly-image" src="./images/jbly-swipes.gif" alt="gif of jbly swiping function"/></div>
+        </div>
+        <p>Using React, as part of a pair, we produced a job board that functions in a similar way to Tinder. A lot of the project was done in a pair coding format, where we interchanged roles several times a day so that we both had a full grasp of the whole project. Adding gestures to the mobile version of the app using react-hammerjs was something that I concentrated on specifically.
         </p>
         <h4>Technologies used:</h4>
         <div>
@@ -98,9 +104,13 @@
       </div>
       <div class="card poober">
         <h3>Poober - a full stack MEAN app</h3>
-        <img class="poober-image" src="./images/poober-mobile.png" alt="image of poober homepage">
-        <p>Using Angular1, in a group of three, we created an app that allows people to share their bathrooms with other users. I was responsible for for much of the backend API we created, including creating bathroom request and reject routes. I also wrote a fairly exhaustive backend testing suite using Mocha, Chai and NYC.
-        </p>
+        <div class="main-carousel">
+          <div class="carousel-cell"><img src="./images/poober-map.png" alt=""/></div>
+          <div class="carousel-cell"><img src="./images/poober-mobile.png" alt=""/></div>
+          <div class="carousel-cell"><img src="./images/poober-list.png" alt=""/></div>
+        </div>
+
+        <p>Using Angular1, in a group of three, we created an app that allows people to share their bathrooms with other users. I was responsible for for much of the backend API we created, including creating bathroom request and reject routes. I also wrote a fairly exhaustive backend testing suite using Mocha, Chai and NYC.</p>
         <h4>Technologies used:</h4>
         <div>
           <i class="devicon-angularjs-plain-wordmark colored"></i>
@@ -117,7 +127,7 @@
       </div>
       <div class="card bach">
         <h3>Bach 'n' Eggs - Express blogging page</h3>
-        <img class="bach-image" src="./images/bachneggs.png" alt="">
+        <img class="bach-image" src="./images/bachneggs.png" alt=""/>
         <p>Using RESTful routes, I created a blogging site for a musician to create posts about upcoming concerts. This was a first introduction into backend development and creating a full-stack app as well as consuming third party APIs.
         </p>
         <h4>Technologies used:</h4>
@@ -133,7 +143,7 @@
       </div>
       <div class="card l2c">
         <h3>Learn to code - a javaScript game</h3>
-        <img class="l2c-image" src="./images/l2c-action.gif" alt="gif of game">
+        <img class="l2c-image" src="./images/l2c-action.gif" alt="gif of game"/>
         <p>Using HTML, CSS, JavaScript and jQuery, I created a maze game that required the player to input a list of commands to get the character across the maze. This project forced me into thinking in detail about using objects and constructor functions in order to make my code more readable and reusable.
         </p>
         <h4>Technologies used:</h4>

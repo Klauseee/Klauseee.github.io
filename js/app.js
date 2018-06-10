@@ -6,8 +6,7 @@ const placeholders = {
   about: [],
   skills: [],
   portfolio: [],
-  experience: [],
-  education: []
+  experience: []
 };
 
 // Dom content loaded
@@ -21,6 +20,7 @@ function init() {
   $('.about').addClass('active');
 
   $.each($sections, (i, section) => {
+    console.log($(section).outerHeight());
     if(i < $sections.length - 1) {
       placeholders[section.id].push(($(section).offset().top - 150), ($($sections[i + 1]).offset().top - 150));
     }
@@ -33,7 +33,7 @@ function init() {
       } else {
         $(`.${section}`).removeClass('active');
       }
-      if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+      if($(window).scrollTop() + $(window).height() > $(document).height() - 50) {
         $('.education').addClass('active');
         $('.experience').removeClass('active');
       } else {
@@ -71,5 +71,9 @@ function init() {
     }, 1500);
   });
 
+  $('.main-carousel').flickity({
+    cellAlign: 'center',
+    contain: true
+  });
 
 }

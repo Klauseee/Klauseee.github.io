@@ -37,7 +37,7 @@ a:visited {
 #sidebar {
   // right: 50px;
   display: inline-flex;
-  width: 160px;
+  width: 185px;
   height: 100vh;
   flex-direction: column;
   background-color: #778899;
@@ -90,8 +90,11 @@ a:visited {
           -o-transition: color 0.3s ease-out;
           transition: color 0.3s ease-out;
           &.active {
-            color: red;
+            color: black;
             font-weight: 900;
+          }
+          &:hover {
+            color: #D3C7DE;
           }
         }
       }
@@ -119,11 +122,11 @@ a:visited {
 }
 
 main {
-  width: calc(100vw - 160px);
+  width: calc(100vw - 185px);
   position: relative;
   padding-left: 70px;
   padding-right: 70px;
-  margin-left: 160px;
+  margin-left: 185px;
   background-color: rgba(250, 250, 250, 0.93);
   section {
     margin-top: 100px;
@@ -131,7 +134,6 @@ main {
     border-bottom: 2px solid grey;
   }
   #skills {
-    margin-top: 100px;
     div {
       padding: 0;
       list-style: none;
@@ -148,10 +150,16 @@ main {
   }
   #portfolio {
     .card {
-      // border: 1px solid grey;
       img {
+        margin: 0 auto;
         height: 40vh;
         width: auto;
+      }
+      .main-carousel {
+        .carousel-cell {
+          position: relative;
+          width: 100%;
+        }
       }
     }
   }
