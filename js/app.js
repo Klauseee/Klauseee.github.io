@@ -19,12 +19,14 @@ function init() {
   const $links = $('.navbar-item');
   $('.about').addClass('active');
 
-  $.each($sections, (i, section) => {
-    console.log($(section).outerHeight());
-    if(i < $sections.length - 1) {
-      placeholders[section.id].push(($(section).offset().top - 150), ($($sections[i + 1]).offset().top - 150));
-    }
-  });
+  setTimeout(() => {
+    $.each($sections, (i, section) => {
+      console.log($(section).outerHeight());
+      if(i < $sections.length - 1) {
+        placeholders[section.id].push(($(section).offset().top - 150), ($($sections[i + 1]).offset().top - 150));
+      }
+    });
+  }, 1);
 
   $(window).scroll(() =>{
     for(var section in placeholders) {
