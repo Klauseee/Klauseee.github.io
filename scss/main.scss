@@ -149,16 +149,35 @@ main {
     }
   }
   #portfolio {
+    h3 {
+      text-align: center;
+    }
     .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       img {
         margin: 0 auto;
         height: 40vh;
         width: auto;
       }
+      a {
+        color: blue;
+      }
       .main-carousel {
+        margin-bottom: 40px;
         .carousel-cell {
+          display: flex;
           position: relative;
           width: 100%;
+        }
+      }
+      .technologies {
+        display: flex;
+        align-content: space-around;
+        margin-bottom: 20px;
+        i {
+          font-size: 26px;
         }
       }
     }

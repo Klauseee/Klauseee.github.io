@@ -112,13 +112,30 @@ main {
       flex-basis: 25%;
       margin-top: 26px;
       font-size: 3.5rem; }
-  main #portfolio .card img {
-    margin: 0 auto;
-    height: 40vh;
-    width: auto; }
-  main #portfolio .card .main-carousel .carousel-cell {
-    position: relative;
-    width: 100%; }
+  main #portfolio h3 {
+    text-align: center; }
+  main #portfolio .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    main #portfolio .card img {
+      margin: 0 auto;
+      height: 40vh;
+      width: auto; }
+    main #portfolio .card a {
+      color: blue; }
+    main #portfolio .card .main-carousel {
+      margin-bottom: 40px; }
+      main #portfolio .card .main-carousel .carousel-cell {
+        display: flex;
+        position: relative;
+        width: 100%; }
+    main #portfolio .card .technologies {
+      display: flex;
+      align-content: space-around;
+      margin-bottom: 20px; }
+      main #portfolio .card .technologies i {
+        font-size: 26px; }
 
 #background-image {
   background-image: url("/images/london.jpeg");
