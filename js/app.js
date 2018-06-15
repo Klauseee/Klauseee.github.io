@@ -32,7 +32,7 @@ function init() {
       } else {
         $(`.${section}`).removeClass('active');
       }
-      if($(window).scrollTop() + $(window).height() > $(document).height() - 50) {
+      if($(window).scrollTop() + $(window).height() > $(document).height() - 20) {
         $('.education').addClass('active');
         $('.experience').removeClass('active');
       } else {
